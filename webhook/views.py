@@ -2,6 +2,7 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.timezone import make_aware
 from datetime import datetime
+from .bot import airbnb_support_bot
 import json
 
 from .models import WhatsAppMessage
@@ -52,10 +53,14 @@ def whatsapp_webhook(request):
                         sender_id = message.get("from")
                         sender_name = contact_map.get(sender_id, "Unknown")
                         message_type = message.get("type")
+                        
+                        
 
                         if message_type == "text":
                             text_body = message.get("text", {}).get("body", "")
                             timestamp = make_aware(datetime.fromtimestamp(int(message.get("timestamp"))))
+                            
+                            airbnb_support_bot(text_body)
 
                             WhatsAppMessage.objects.create(
                                 wa_id=sender_id,
