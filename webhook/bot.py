@@ -1,7 +1,7 @@
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
-
+from webhook.models import WhatsAppMessage
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_SUPPORT_API_KEY"))  # Load your OpenAI API key from environment variables
@@ -39,11 +39,17 @@ def airbnb_support_bot(prompt):
             system_message,
             {"role": "user", "content": prompt}
         ]
+        msg = WhatsAppMessage.objects.order_by('-timestamp')[:10]
+        # Format as simple user messages
+        formatted_messages = [f"User: {m.message}" for m in msg]
+
+        print(formatted_messages)
+        print("msg",msg)
 
         # Call OpenAI's GPT model
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=messages,
+            messages=messages + formatted_messages,
             temperature=0.7  # Balanced creativity for natural responses
         )
 
