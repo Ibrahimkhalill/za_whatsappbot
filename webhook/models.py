@@ -6,6 +6,7 @@ class WhatsAppMessage(models.Model):
     message_type = models.CharField(max_length=20)
     message_text = models.TextField(blank=True, null=True)
     timestamp = models.DateTimeField()
+    reply = models.TextField(blank=True, null=True)
 
     received_at = models.DateTimeField(auto_now_add=True)  # when saved in DB
 

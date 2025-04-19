@@ -60,14 +60,17 @@ def whatsapp_webhook(request):
                             text_body = message.get("text", {}).get("body", "")
                             timestamp = make_aware(datetime.fromtimestamp(int(message.get("timestamp"))))
                             
-                            airbnb_support_bot(text_body)
-
+                            
+                            
+                            reply =  airbnb_support_bot(text_body)
+                           
                             WhatsAppMessage.objects.create(
                                 wa_id=sender_id,
                                 sender_name=sender_name,
                                 message_type=message_type,
                                 message_text=text_body,
-                                timestamp=timestamp
+                                timestamp=timestamp,
+                                reply = reply
                             )
 
                             print(f"🔔 New message from {sender_name} ({sender_id}) - Type: {message_type}")
