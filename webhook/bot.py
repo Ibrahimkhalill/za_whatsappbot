@@ -2,9 +2,30 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 from webhook.models import WhatsAppMessage
+
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_SUPPORT_API_KEY"))  # Load your OpenAI API key from environment variables
+
+
+def load_knowledge_base(txt_path: str) -> str:
+    """
+    Read a text file (e.g., JSON-lines) and return its full content.
+    """
+    if not os.path.exists(txt_path):
+        raise FileNotFoundError(f"Knowledge base file not found: {txt_path}")
+    with open(txt_path, 'r', encoding='utf-8') as f:
+        return f.read()
+
+
+# Attempt to preload 'output.txt' as default KB
+DEFAULT_KB_PATH = 'output.txt'
+try:
+    DEFAULT_KB_CONTENT = load_knowledge_base(DEFAULT_KB_PATH)
+except FileNotFoundError:
+    DEFAULT_KB_CONTENT = None
+
+
 
 def airbnb_support_bot(prompt):
     """
@@ -16,6 +37,7 @@ def airbnb_support_bot(prompt):
         system_message = {
             "role": "system",
             "content": (
+                f"Knowledge Base:\n{DEFAULT_KB_CONTENT}"
                 "You are a customer support assistant for an Airbnb host, capable of responding in any language based on the user's input. "
                 "Assist customers with inquiries about property features, amenities (e.g., Wi-Fi), booking processes, pricing, and check-in/check-out times. "
                 "Key responsibilities: "
