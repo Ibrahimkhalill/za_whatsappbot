@@ -74,39 +74,33 @@ def check_booking_availability(
 # ekkane hoy toba dubai er property filter kora lagbe get properites by country create kore den
 
     try:
-        print("property_name", property_name)
-        print("city_name", city_name)
+        # Fetch property data based on the provided name, city, or country
         if property_name and not property_id:
-            # Assume client.get_property_by_name returns a property ID
+            # Get property by name
             property_data = client.get_property_by_name(property_name)
-            property_id = property_data.get("data", [{}])[0].get("id")  # Safely get the id
+            property_id = property_data.get("data", [{}])[0].get("id")
 
             if not property_id:
                 return {"available": False, "message": f"Property '{property_name}' not found."}
-            
-                        # Fetch reservations for the property
-            reservations_data = client.get_reservations_by_properties(
-                property_ids=[property_id]
-            ).get("data", [])
-            
-        elif city_name and not property_id:    
-            property_data = client.get_property_by_city(city_name)
-            property_ids = property_data.get("data", [{}])[0].get("id")  # Safely get the id
 
-            # if not property_id:
-            #     return {"available": False, "message": f"Property '{property_name}' not found."}
-            
-            reservations_data = client.get_reservations_by_properties(
-                property_ids=property_ids
-            ).get("data", [])
-        
-        # Check for date overlaps with existing reservations
+        elif city_name and not property_id:
+            # Get property by city
+            property_data = client.get_property_by_city(city_name)
+            if len(property_data.get("data", [])) > 0:
+                property_ids = [prop.get("id") for prop in property_data.get("data", [])]
+            else:
+                return {"available": False, "message": f"No properties found in {city_name}."}
+
+
+        # Fetch reservations for the properties
+        reservations_data = client.get_reservations_by_properties(property_ids=property_ids).get("data", [])
+
+        # Date overlap check with existing reservations
         for booking in reservations_data:
             # Skip cancelled reservations
             if booking.get("status") == "cancelled":
                 continue
 
-            # Parse booked dates in ISO format
             booked_start = datetime.fromisoformat(booking["arrival_date"].replace("Z", "+00:00")).date()
             booked_end = datetime.fromisoformat(booking["departure_date"].replace("Z", "+00:00")).date()
 
