@@ -3,22 +3,27 @@ import os, json
 from dotenv import load_dotenv
 from .bot_utilities import tools 
 from webhook.models import WhatsAppMessage
-from .utils import check_booking_availability, get_property_details
+from .utils import check_booking_availability, get_property_details, process_conversation
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_SUPPORT_API_KEY"))
+o = OpenAI(api_key=os.getenv("OPENAI_SUPPORT_API_KEY"))
+
 
 def airbnb_support_bot(prompt, sender_id):
-    """
-    A multilingual customer support bot for an Airbnb host, tuned for booking inquiries, pricing negotiations,
-    and property-related questions based on provided scenarios. Detects and responds in the user's input language.
-    """
+        
+    # Fetch the latest 10 WhatsApp messages from the database
+    msg = WhatsAppMessage.objects.filter(wa_id=sender_id).order_by('-timestamp')[:4]
+    
+    conversations = process_conversation(msg,o)
+    print("formatted_messages", conversations)
+    
     try:
         # System message designed to handle multilingual inputs and scenario-specific logic
         system_message = {
             "role": "system",
            "content": (
+               f"previous conversations: {conversations} "
                 "You are a customer support assistant for an Airbnb host,"    # capable of responding in any language based on the user's input. "
                 "Assist customers with inquiries about property features, amenities (e.g., Wi-Fi), booking processes, pricing, and check-in/check-out times. "
                 "Key responsibilities: "
@@ -43,30 +48,14 @@ def airbnb_support_bot(prompt, sender_id):
             system_message,
             {"role": "user", "content": prompt}
         ]
-        
-        # Fetch the latest 10 WhatsApp messages from the database
-        msg = WhatsAppMessage.objects.filter(wa_id=sender_id).order_by('-timestamp')[:3]
-        
-           
-        
-        # Format the fetched messages into a list with roles (user and assistant)
-        formatted_messages = []
-        for m in msg:
-            formatted_messages.append({"role": "user", "content": m.message_text})
-            if m.reply:
-                formatted_messages.append({"role": "assistant", "content": m.reply})
-                
-                
-        print(formatted_messages)
-
 
 
         # Call OpenAI's GPT model
-        response = client.chat.completions.create(
+        response = o.chat.completions.create(
             model="gpt-4o",
             tools=tools,
             tool_choice="auto",
-            messages=messages + formatted_messages,
+            messages=messages
             # temperature=0.7
         )
 
@@ -92,7 +81,7 @@ def airbnb_support_bot(prompt, sender_id):
                             check_in=arguments.get("check_in"),
                             check_out=arguments.get("check_out")
                         )
-                        print( "Availability check result:", result)
+                        # print( "Availability check result:", result)
                         return f"Availability check: {result['message']}"
                     elif function_name == "get_property_details":
                         result = get_property_details(
@@ -101,6 +90,7 @@ def airbnb_support_bot(prompt, sender_id):
                         return f"Property details: {json.dumps(result, indent=2)}"
 
             # Return direct text response if no tool call
+            print(message.content.strip())
             return message.content.strip() if message.content else "Error: No valid response content."
 
         # return "Error: No valid response from OpenAI."

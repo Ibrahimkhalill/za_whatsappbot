@@ -61,7 +61,9 @@ def whatsapp_webhook(request):
             c["wa_id"]: c.get("profile", {}).get("name", "Unknown")
             for c in contacts
         }
-        print("messages",messages)
+        for msg in messages:
+            if msg.get("type") == "text" and "text" in msg:
+                print(msg["text"]["body"])
 
         # Only handle the first message
         msg = messages[0]

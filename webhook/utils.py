@@ -1,5 +1,5 @@
 from .client import HospitableClient
-
+import openai
 from datetime import datetime
 
 client = HospitableClient()  # Initialize the API client
@@ -89,7 +89,7 @@ def check_booking_availability(
             property_data = client.get_property_by_city(city_name)
             if len(property_data.get("data", [])) > 0:
                 property_ids = [prop.get("id") for prop in property_data.get("data", [])]
-                print("Property IDs in city:", property_ids)
+                # print("Property IDs in city:", property_ids)
             else:
                 return {"available": False, "message": f"No properties found in {city_name}."}
 
@@ -118,8 +118,6 @@ def check_booking_availability(
 
     except Exception as e:
         return {"available": False, "message": f"Failed to check availability: {str(e)}"}
-
-
 
 
 def preprocessed_property_data(properties_data):
@@ -163,3 +161,36 @@ def preprocessed_property_data(properties_data):
         preprocessed_data.append(property_info)
 
     return preprocessed_data
+
+
+
+def process_conversation(msg, client):
+    # Check if the message list is empty
+    if not msg:
+        return "No previous messages"
+    
+    # Format the fetched messages into a list with roles (user and assistant)
+    formatted_messages = []
+    for m in msg:
+        formatted_messages.append({"role": "user", "content": m.message_text})
+        if m.reply:
+            formatted_messages.append({"role": "assistant", "content": m.reply})
+
+    # Create the messages structure for the API request
+    messages = [{"role": "system", "content": "You are an assistant that summarizes conversations, and it's important to keep track of who said what."}]
+    messages.extend([{"role": entry["role"], "content": entry["content"]} for entry in formatted_messages])
+    
+    # Call the OpenAI API to summarize the conversation using client.chat.completions.create
+    try:
+        summary_response = client.chat.completions.create(
+            model="gpt-3.5-turbo",  # or whichever model you're using for summarization
+            messages=messages,
+            # temperature=0.7  # Uncomment if you want to specify temperature
+        )
+        summary = summary_response.choices[0].message.content.strip()
+        return summary
+    except Exception as e:
+        print(f"Error in summarizing conversation: {e}")
+        return None
+
+
