@@ -79,6 +79,9 @@ def airbnb_support_bot(prompt):
             formatted_messages.append({"role": "user", "content": m.message_text})
             if m.reply:
                 formatted_messages.append({"role": "assistant", "content": m.reply})
+                
+                
+        print(formatted_messages)
 
 
 
@@ -88,7 +91,7 @@ def airbnb_support_bot(prompt):
             tools=tools,
             tool_choice="auto",
             messages=messages + formatted_messages,
-            temperature=0.7
+            # temperature=0.7
         )
 
         # Extract the assistant's reply safely
