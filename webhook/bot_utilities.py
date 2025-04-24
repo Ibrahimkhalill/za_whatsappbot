@@ -36,7 +36,7 @@ tools = [
                     },
                     "city_name": {
                         "type": "string",
-                        "description": "The city where the property is located. Optional; if provided alone, returns all available properties in the city."
+                        "description": "The city where the property is located. Optional if provided alone, returns all available properties in the city."
                     },
                     "check_in": {
                         "type": "string",

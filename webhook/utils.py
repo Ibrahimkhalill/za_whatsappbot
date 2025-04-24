@@ -55,6 +55,7 @@ def check_booking_availability(
     # Ensure at least one identifier is provided
     # if not property_id and not property_name:
     #     return {"available": False, "message": " Please provide either a property ID or property name."}
+    property_ids = []
 
     # Ensure dates are provided
     if not check_in  or not check_out:
@@ -88,12 +89,14 @@ def check_booking_availability(
             property_data = client.get_property_by_city(city_name)
             if len(property_data.get("data", [])) > 0:
                 property_ids = [prop.get("id") for prop in property_data.get("data", [])]
+                print("Property IDs in city:", property_ids)
             else:
                 return {"available": False, "message": f"No properties found in {city_name}."}
 
 
         # Fetch reservations for the properties
         reservations_data = client.get_reservations_by_properties(property_ids=property_ids).get("data", [])
+        # print("Reservations data:", reservations_data)
 
         # Date overlap check with existing reservations
         for booking in reservations_data:
