@@ -62,6 +62,7 @@ class HospitableClient:
             prop for prop in properties if city.lower() in prop.get("address", {}).get("city", "").lower()
         ]
         
+        print("filtered_properties",filtered_properties)
         return {"data": filtered_properties}
     
     

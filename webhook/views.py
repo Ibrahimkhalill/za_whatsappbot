@@ -61,6 +61,7 @@ def whatsapp_webhook(request):
             c["wa_id"]: c.get("profile", {}).get("name", "Unknown")
             for c in contacts
         }
+        print("messages",messages)
 
         # Only handle the first message
         msg = messages[0]
