@@ -79,9 +79,12 @@ def check_booking_availability(
         if property_name and not property_id:
             # Get property by name
             property_data = client.get_property_by_name(property_name)
-            property_id = property_data.get("data", [{}])[0].get("id")
+            print("debuggggggggggggggggggggggggggg",property_data)
+            property_ids = property_data.get("data", [{}])[0].get("id")
+            
+            print("property_id",property_ids)
 
-            if not property_id:
+            if not property_ids:
                 return {"available": False, "message": f"Property '{property_name}' not found."}
 
         elif city_name and not property_id:
@@ -96,6 +99,7 @@ def check_booking_availability(
 
         # Fetch reservations for the properties
         reservations_data = client.get_reservations_by_properties(property_ids=property_ids).get("data", [])
+        
         # print("Reservations data:", reservations_data)
 
         # Date overlap check with existing reservations
@@ -175,9 +179,59 @@ def process_conversation(msg, client):
         formatted_messages.append({"role": "user", "content": m.message_text})
         if m.reply:
             formatted_messages.append({"role": "assistant", "content": m.reply})
+        # Add the system message that provides context for summarizing property details
+    # system_prompt = """
+    #     You are an assistant tasked with summarizing conversations involving property bookings and related topics. 
+    #     Summaries should be clear, distinguishing between user and assistant messages, and highlight key details like:
+    #     - property_name, address, description, Booking Dates, Arrival/Departure Dates, Check-in/Check-out Times.
+    #     - Reservation Status, Number of Guests, Room Details, Amenities, Property Type, House Rules, Calendar Restrictions, Capacity, Tags.
+        
+    #     Ensure responses are concise, clear, and address user questions effectively.
+    #     """   
+        
+    system_prompt = """
+        You are an assistant tasked with summarizing conversations that involve property bookings, details, and related topics. Your summaries should maintain clarity and should always distinguish between user and assistant messages. Make sure to highlight important details, such as booking dates, location, amenities, and other property-specific data.
 
+        The conversation may involve mentions of properties like:
+        - "public_name" (e.g., 'The Walk Flat')
+        - "address", including city, country, and postcode
+        - "description", "summary", and details about the property (such as amenities, check-in/out times, and specific features)
+        - "platform" (e.g., 'airbnb')
+        - "platform_id" (e.g., 'HMJR3D3MHP')
+        - "reservation status", including booking details like dates and guests
+
+        Key details to include in your summary:
+        - **Property Name**: Name of the property (e.g., The Walk Flat).
+        - **Address**: Full address, including street, city, country, postcode, and coordinates.
+        - **Description & Summary**: Short and detailed descriptions of the property (e.g., location, key features, proximity to nearby landmarks).
+        - **Booking Dates**: The exact dates the user made the booking.
+        - **Arrival and Departure Dates**: The dates the guest is scheduled to arrive and depart.
+        - **Check-in and Check-out Times**: The exact times for checking in and checking out.
+        - **Reservation Status**: Status of the reservation (e.g., accepted, pending).
+        - **Number of Guests**: Include the total number of guests, adults, children, infants, and pets.
+        - **Room Details**: Information about room types (e.g., one bedroom with a double bed and a couch bed).
+        - **Amenities**: Important amenities offered by the property (e.g., pool, Wi-Fi, kitchen, air conditioning, parking, elevator).
+        - **Property Type**: Type of property (e.g., condominium).
+        - **Room Type**: Type of room (e.g., entire home).
+        - **House Rules**: Include house rules (e.g., pets allowed, smoking allowed, events allowed).
+        - **Calendar Restrictions**: Whether the property has calendar restrictions (e.g., availability for long-term stays).
+        - **Capacity**: Maximum guest capacity, number of bedrooms, and number of bathrooms.
+        - **Tags**: Any relevant tags for the property (e.g., suitable for families, business travelers, etc.).
+        
+        If the user has asked for specific details about the property or reservation, ensure those are included in the summary, such as:
+        - Check-in/Check-out dates
+        - Number of guests
+        - Room features (e.g., bed types, number of rooms)
+        - Property features (e.g., pool, free parking)
+        - House rules (e.g., smoking, pets allowed)
+        - Other relevant property-specific data
+
+        Ensure the summary is concise, clear, and covers the user's questions or information requests effectively.
+        """
+    
+    
     # Create the messages structure for the API request
-    messages = [{"role": "system", "content": "You are an assistant that summarizes conversations, and it's important to keep track of who said what."}]
+    messages = [{"role": "system", "content": system_prompt}]
     messages.extend([{"role": entry["role"], "content": entry["content"]} for entry in formatted_messages])
     
     # Call the OpenAI API to summarize the conversation using client.chat.completions.create
@@ -185,6 +239,7 @@ def process_conversation(msg, client):
         summary_response = client.chat.completions.create(
             model="gpt-3.5-turbo",  # or whichever model you're using for summarization
             messages=messages,
+            max_tokens=150,  # Adjust the max tokens as needed
             # temperature=0.7  # Uncomment if you want to specify temperature
         )
         summary = summary_response.choices[0].message.content.strip()

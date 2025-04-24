@@ -15,8 +15,8 @@ def airbnb_support_bot(prompt, sender_id):
     # Fetch the latest 10 WhatsApp messages from the database
     msg = WhatsAppMessage.objects.filter(wa_id=sender_id).order_by('-timestamp')[:4]
     
-    conversations = process_conversation(msg,o)
-    print("formatted_messages", conversations)
+    conversations = process_conversation(msg, o)
+    print("formatted_messages", type(conversations), conversations)
     
     try:
         # System message designed to handle multilingual inputs and scenario-specific logic
@@ -29,12 +29,12 @@ def airbnb_support_bot(prompt, sender_id):
                 "Key responsibilities: "
                 "- For availability inquiries, call the 'check_booking_availability' tool with property_id (or property_name) and check-in/check-out dates in YYYY-MM-DD format. "
                 "- For property feature or amenity questions (e.g., Wi-Fi, bedrooms), call the 'get_property_details' tool with property_id if provided, or without for all properties. "
-                "- Provide pricing and negotiate within reasonable limits (e.g., reduce price slightly if requested, like from 65 to 55 OMR). "
+                # "- Provide pricing and negotiate within reasonable limits (e.g., reduce price slightly if requested, like from 65 to 55 OMR). "
                 "- Share property details, such as Wi-Fi passwords (e.g., 12456789), building access codes (e.g., #2024#), or media links (e.g., Instagram: https://www.instagram.com/sialia.chalet). "
                 "- Adjust check-in/check-out times if feasible (e.g., allow 10 AM check-in instead of 1 PM if no conflicting bookings, after checking availability). "
                 "- For booking confirmation, request a bank transfer to the number 96967808 and allow partial payments (e.g., 20 OMR deposit). "
                 "- Handle special requests, such as date changes or cancellations, with flexibility (e.g., allow date changes with prior notice). "
-                "- For unrelated queries, politely redirect to property or booking topics. if ongoing booking conversations are detected, use the last 3 messages for context. "
+                "- For unrelated queries, politely redirect to property or booking topics. "
                 "- Respond in a friendly, professional tone, using slight colloquialisms (e.g., 'OK', 'طيب', or 'تمام') to match the conversational style. "
                 "- If the user repeats requests (e.g., availability for the same dates), confirm or clarify consistently using conversation history. "
                 "- if user loss the track of convsersation, and anyting like hello, hi, respond with a friendly greeting and take him to actual conversation. "
@@ -90,7 +90,7 @@ def airbnb_support_bot(prompt, sender_id):
                         return f"Property details: {json.dumps(result, indent=2)}"
 
             # Return direct text response if no tool call
-            print(message.content.strip())
+            print("reply",message.content.strip())
             return message.content.strip() if message.content else "Error: No valid response content."
 
         # return "Error: No valid response from OpenAI."
