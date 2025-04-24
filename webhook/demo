@@ -1,0 +1,1111 @@
+{
+    "properties": [
+        {
+            "id": "c316441a-b274-4156-bbc3-e4804be75907",
+            "name": "The Walk Flat",
+            "public_name": "The Walk Flat",
+            "picture": "https://a0.muscache.com/im/pictures/421f3db4-c7ec-4f98-9dd9-32ad9b890275.jpg?aki_policy=small",
+            "address": {
+                "number": "3450 Way",
+                "street": "Luban D",
+                "city": "Muscat",
+                "postcode": "451",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.62859726",
+                    "longitude": "58.26808167"
+                },
+                "display": "3450 Way, Luban D, Muscat, 451, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "Enjoy staying in the heart of Muscat at The Wave.\nOne bed room apartment in front of the Mall and on min to the walk street with in the marina.\nas well revel in the swimming pool in the compound.\nthe the theme of the  Walk flat is designed to spread the relaxation and happiness to the clients with its illuminations and decorations.",
+            "description": "Enjoy staying in the heart of Muscat at The Wave.\nOne bed room apartment in front of the Mall and on min to the walk street with in the marina.\nas well revel in the swimming pool in the compound.\nthe the theme of the  Walk flat is designed to spread the relaxation and happiness to the clients with its illuminations and decorations.\n\nIn THE WAVE, close to THE WALK MALL, and THE MYSK HOTEL, in the Center of the wave. All services are close by.\nOne bed room apartment with class service.\n\nthe access to The Flat in the building behind the Mall directly and close to the walk street.  there are privet access to the pool for the tenet by the building card as well for the privet parking.\n\nI am available for any questions by calling me 24h\n\nThe Walk Mall\n\nFrom Airport by taxi, is less than 7 mins",
+            "checkin": "15:00",
+            "checkout": "11:00",
+            "amenities": [
+                "ac",
+                "alfresco_dining",
+                "bathtub",
+                "beach_access",
+                "bed_linens",
+                "books",
+                "carbon_monoxide_detector",
+                "childrens_dinnerware",
+                "coffee",
+                "coffee_maker",
+                "conditioner",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dishwasher",
+                "elevator",
+                "essentials",
+                "freezer",
+                "free_parking",
+                "garden_or_backyard",
+                "hair_dryer",
+                "hangers",
+                "heating",
+                "high_chair",
+                "hot_water",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "long_term_stays_allowed",
+                "microwave",
+                "mini_fridge",
+                "outdoor_seating",
+                "oven",
+                "pack_n_play_travel_crib",
+                "patio_or_belcony",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "street_parking",
+                "tv",
+                "wardrobe_or_closet",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 4,
+                "bedrooms": 1,
+                "beds": 1,
+                "bathrooms": 1.5
+            },
+            "room_details": [
+                {
+                    "beds": [
+                        {
+                            "type": "double_bed",
+                            "quantity": 1
+                        },
+                        {
+                            "type": "couch_bed",
+                            "quantity": 1
+                        }
+                    ]
+                }
+            ],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": true
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "4494885d-fbf9-45d2-bf00-f2f11e6152c2",
+            "name": "Amazing Flat Boho Style with garden & pool view",
+            "public_name": "Amazing Flat Boho Style with garden & pool view",
+            "picture": "https://a0.muscache.com/im/pictures/f8007391-b2fa-49d3-b9c0-f63f9f08fdf5.jpg?aki_policy=small",
+            "address": {
+                "street": "18th November Street",
+                "city": "Seeb",
+                "state": "Muscat Governorate",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.63027573",
+                    "longitude": "58.27156067"
+                },
+                "display": "18th November Street, Seeb, Muscat Governorate, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "Your family will be close to everything when you stay at this centrally-located place. You will enjoy the pool and the garden view and full access to the gym located in the Marsa Garden.\n6 min drive to the airport.\n3 min walking distance to ALMOUJ beach.\n3 min walking distance to the coffee shops and restaurants.",
+            "description": "Your family will be close to everything when you stay at this centrally-located place. You will enjoy the pool and the garden view and full access to the gym located in the Marsa Garden.\n6 min drive to the airport.\n3 min walking distance to ALMOUJ beach.\n3 min walking distance to the coffee shops and restaurants.",
+            "checkin": "14:00",
+            "checkout": "11:00",
+            "amenities": [
+                "ac",
+                "baby_monitor",
+                "bbq_area",
+                "beach_access",
+                "bidet",
+                "board_games",
+                "carbon_monoxide_detector",
+                "childrens_books_and_toys",
+                "cleaning_products",
+                "coffee",
+                "coffee_maker",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "elevator",
+                "exercise_equipment",
+                "extra_pillows_and_blankets",
+                "fire_extinguisher",
+                "first_aid_kit",
+                "free_parking",
+                "garden_or_backyard",
+                "gym",
+                "hair_dryer",
+                "hangers",
+                "heating",
+                "high_chair",
+                "hot_water",
+                "iron",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "pack_n_play_travel_crib",
+                "patio_or_belcony",
+                "playground",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 6,
+                "bedrooms": 2,
+                "beds": 4,
+                "bathrooms": 1.5
+            },
+            "room_details": [
+                {
+                    "beds": [
+                        {
+                            "type": "sofa_bed",
+                            "quantity": 1
+                        },
+                        {
+                            "type": "floor_mattress_bed",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "beds": [
+                        {
+                            "type": "single_bed",
+                            "quantity": 2
+                        }
+                    ]
+                },
+                {
+                    "beds": [
+                        {
+                            "type": "double_bed",
+                            "quantity": 1
+                        }
+                    ]
+                }
+            ],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": false
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "44a8b704-01d7-4b50-8c64-cc33ac26da98",
+            "name": "The white flat",
+            "public_name": "Wonderful Flat with a beautiful view",
+            "picture": "https://a0.muscache.com/im/pictures/276933e6-e389-4bd7-929d-f0ad0580104e.jpg?aki_policy=small",
+            "address": {
+                "number": "The links, 604 6th floor",
+                "street": "Al Matar Street",
+                "city": "Muscat",
+                "state": "Muscat Governorate",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.57213907",
+                    "longitude": "58.29703107"
+                },
+                "display": "The links, 604 6th floor, Al Matar Street, Muscat, Muscat Governorate, OM"
+            },
+            "timezone": "+0400",
+            "listed": false,
+            "currency": "OMR",
+            "summary": "Bring the whole family to this great place with lots of room for fun.",
+            "description": "Bring the whole family to this great place with lots of room for fun.",
+            "checkin": "14:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "alfresco_dining",
+                "carbon_monoxide_detector",
+                "cooking_basics",
+                "crib",
+                "free_parking",
+                "hair_dryer",
+                "heating",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "patio",
+                "pool",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 6,
+                "bedrooms": 2,
+                "beds": 3,
+                "bathrooms": 1.5
+            },
+            "room_details": [],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": null,
+                "events_allowed": true
+            },
+            "calendar_restricted": true,
+            "parent_child": null
+        },
+        {
+            "id": "c2dceb36-818e-457a-a25c-180a13685b94",
+            "name": "Woody Flat",
+            "public_name": "Woody Flat",
+            "picture": "https://a0.muscache.com/im/pictures/0f326243-b927-4c59-8481-cb0487ce7911.jpg?aki_policy=small",
+            "address": {
+                "street": "Al Mauj Street",
+                "city": "Sib",
+                "state": "Muscat Governorate",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.62810856",
+                    "longitude": "58.26909721"
+                },
+                "display": "Al Mauj Street, Sib, Muscat Governorate, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "Relax with the whole family at this peaceful place to stay.",
+            "description": "Relax with the whole family at this peaceful place to stay.",
+            "checkin": "15:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "beach_access",
+                "carbon_monoxide_detector",
+                "coffee_maker",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "fire_extinguisher",
+                "free_parking",
+                "garden_or_backyard",
+                "hair_dryer",
+                "heating",
+                "iron",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "patio_or_belcony",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 6,
+                "bedrooms": 2,
+                "beds": 4,
+                "bathrooms": 2
+            },
+            "room_details": [
+                {
+                    "beds": [
+                        {
+                            "type": "double_bed",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "beds": [
+                        {
+                            "type": "sofa_bed",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "beds": [
+                        {
+                            "type": "single_bed",
+                            "quantity": 2
+                        }
+                    ]
+                }
+            ],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": false
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "abe39ad8-58a3-41cc-a86b-0c81f28b999b",
+            "name": "Cozy Marsa 1 bedroom - 5 min for Airport",
+            "public_name": "Cozy Marsa 1 bedroom - 5 min for Airport",
+            "picture": "https://a0.muscache.com/im/pictures/48ca39ee-c574-4046-a0b9-76862e57962e.jpg?aki_policy=small",
+            "address": {
+                "number": "Flat 508",
+                "street": "Street 449",
+                "city": "Muscat",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.62881601",
+                    "longitude": "58.26965746"
+                },
+                "display": "Flat 508, Street 449, Muscat, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "Keep it simple at this peaceful and centrally-located place.",
+            "description": "Keep it simple at this peaceful and centrally-located place.\n\nprivate parking",
+            "checkin": "14:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "carbon_monoxide_detector",
+                "coffee_maker",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "fire_extinguisher",
+                "first_aid_kit",
+                "free_parking",
+                "hair_dryer",
+                "heating",
+                "high_chair",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "patio",
+                "patio_or_belcony",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 4,
+                "bedrooms": 1,
+                "beds": 1,
+                "bathrooms": 1
+            },
+            "room_details": [
+                {
+                    "beds": [
+                        {
+                            "type": "double_bed",
+                            "quantity": 1
+                        },
+                        {
+                            "type": "couch_bed",
+                            "quantity": 1
+                        }
+                    ]
+                }
+            ],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": true
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "9289fc34-1148-41d3-9fdb-1cd599b140d7",
+            "name": "White flat 5mins from airport",
+            "public_name": "White flat 5mins from airport",
+            "picture": "https://a0.muscache.com/im/pictures/e9abbff1-d441-4fdc-a968-26b64a981a5f.jpg?aki_policy=small",
+            "address": {
+                "number": "The links, 604 6th floor",
+                "street": "Al Matar Street",
+                "city": "Muscat",
+                "state": "Muscat Governorate",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.57361814",
+                    "longitude": "58.28315802"
+                },
+                "display": "The links, 604 6th floor, Al Matar Street, Muscat, Muscat Governorate, OM"
+            },
+            "timezone": "+0400",
+            "listed": false,
+            "currency": "OMR",
+            "summary": "Your family will be close to everything when you stay at this centrally-located place.",
+            "description": "Your family will be close to everything when you stay at this centrally-located place.",
+            "checkin": "14:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "alfresco_dining",
+                "carbon_monoxide_detector",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "essentials",
+                "free_parking",
+                "gym",
+                "hair_dryer",
+                "heating",
+                "hot_water",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "patio",
+                "pool",
+                "refrigerator",
+                "shampoo",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 4,
+                "bedrooms": 2,
+                "beds": 1,
+                "bathrooms": 1.5
+            },
+            "room_details": [],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": true
+            },
+            "calendar_restricted": true,
+            "parent_child": null
+        },
+        {
+            "id": "8dd94e6e-8447-4f0b-88e0-2e716ec72c15",
+            "name": "O2 Apartment",
+            "public_name": "O2 Flat 5 mins from Airport",
+            "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-805791451155706427/original/238f10fe-8191-4b4c-aa6a-27f60ed16df5.jpeg?aki_policy=small",
+            "address": {
+                "number": "Oxygen",
+                "city": "Muscat",
+                "state": "Muscat Governorate",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.57779335",
+                    "longitude": "58.29984337"
+                },
+                "display": "Oxygen, Muscat, Muscat Governorate, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "This special place is close to everything, making it easy to plan your visit.",
+            "description": "This special place is close to everything, making it easy to plan your visit.",
+            "checkin": "15:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "alfresco_dining",
+                "carbon_monoxide_detector",
+                "childrens_dinnerware",
+                "coffee_maker",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "ev_charger",
+                "exercise_equipment",
+                "free_parking",
+                "gym",
+                "hair_dryer",
+                "heating",
+                "high_chair",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "outdoor_seating",
+                "patio_or_belcony",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 4,
+                "bedrooms": 1,
+                "beds": 1,
+                "bathrooms": 2
+            },
+            "room_details": [],
+            "property_type": "condominium",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": true
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "e506f22a-3c27-49df-8b98-d2c0cbf2a25c",
+            "name": "The Gray Cozy Flat",
+            "public_name": "The Gray Cozy Flat",
+            "picture": "https://a0.muscache.com/im/pictures/8b318bfe-57ff-46f0-8dc2-80f0076024d0.jpg?aki_policy=small",
+            "address": {
+                "street": "Street 6",
+                "city": "Muscat",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.62985791",
+                    "longitude": "58.26615214"
+                },
+                "display": "Street 6, Muscat, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "Your family will be close to everything when you stay at this centrally-located place. Close to the airport around 7 - 10 mins drive. the the flat close to the marina, restaurants and the mall around 1 mins walk.",
+            "description": "Your family will be close to everything when you stay at this centrally-located place. Close to the airport around 7 - 10 mins drive. the the flat close to the marina, restaurants and the mall around 1 mins walk.",
+            "checkin": "14:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "alfresco_dining",
+                "bbq_area",
+                "beach_access",
+                "carbon_monoxide_detector",
+                "coffee_maker",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "essentials",
+                "fire_extinguisher",
+                "first_aid_kit",
+                "free_parking",
+                "garden_or_backyard",
+                "hair_dryer",
+                "heating",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "patio_or_belcony",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "tv",
+                "wardrobe_or_closet",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 4,
+                "bedrooms": 2,
+                "beds": 4,
+                "bathrooms": 1.5
+            },
+            "room_details": [
+                {
+                    "beds": [
+                        {
+                            "type": "single_bed",
+                            "quantity": 2
+                        }
+                    ]
+                },
+                {
+                    "beds": [
+                        {
+                            "type": "sofa_bed",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "beds": [
+                        {
+                            "type": "double_bed",
+                            "quantity": 1
+                        }
+                    ]
+                }
+            ],
+            "property_type": "apartment",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": null
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "c4b46a58-3d84-4960-94c5-dcd3c5342e19",
+            "name": "Marina view",
+            "public_name": "Marina View Lovely cozy 1BR Apt",
+            "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-839665971467669779/original/797a5939-ec23-4cfd-bb2f-f3edd9ea50c9.jpeg?aki_policy=small",
+            "address": {
+                "city": "Seeb",
+                "state": "Muscat Governorate",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.62963386",
+                    "longitude": "58.26469470"
+                },
+                "display": "Seeb, Muscat Governorate, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "OMR",
+            "summary": "This special place is close to everything, making it easy to plan your visit.",
+            "description": "This special place is close to everything, making it easy to plan your visit.",
+            "checkin": "14:00",
+            "checkout": "12:00",
+            "amenities": [
+                "ac",
+                "beach_access",
+                "carbon_monoxide_detector",
+                "coffee_maker",
+                "cooking_basics",
+                "crib",
+                "dishes_and_silverware",
+                "dryer",
+                "free_parking",
+                "garden_or_backyard",
+                "hair_dryer",
+                "heating",
+                "iron",
+                "jacuzzi",
+                "kitchen",
+                "laptop_friendly_workspace",
+                "patio_or_belcony",
+                "pool",
+                "refrigerator",
+                "smoke_detector",
+                "tv",
+                "washer",
+                "wireless_internet"
+            ],
+            "capacity": {
+                "max": 4,
+                "bedrooms": 1,
+                "beds": 1,
+                "bathrooms": 2
+            },
+            "room_details": [],
+            "property_type": "apartment",
+            "room_type": "Entire Home",
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": true,
+                "smoking_allowed": false,
+                "events_allowed": true
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        },
+        {
+            "id": "55e8f5ee-80c2-4924-9636-cce26ee099ad",
+            "name": "A great apartment near to marina",
+            "public_name": null,
+            "picture": "https://media.vrbo.com/lodging/93000000/92480000/92470200/92470159/03c014a9.c9.jpg",
+            "address": {
+                "number": "Almouj",
+                "city": "Muscat",
+                "state": "Muscat Governorate",
+                "postcode": "130",
+                "country": "OM",
+                "country_name": "Oman",
+                "coordinates": {
+                    "latitude": "23.63127910",
+                    "longitude": "58.26620510"
+                },
+                "display": "Almouj, Muscat, Muscat Governorate, 130, OM"
+            },
+            "timezone": "+0400",
+            "listed": true,
+            "currency": "USD",
+            "summary": null,
+            "description": null,
+            "checkin": "15:00",
+            "checkout": "11:00",
+            "amenities": null,
+            "capacity": {
+                "max": 0,
+                "bedrooms": 0,
+                "beds": null,
+                "bathrooms": null
+            },
+            "room_details": [],
+            "property_type": null,
+            "room_type": null,
+            "tags": [],
+            "house_rules": {
+                "pets_allowed": null,
+                "smoking_allowed": null,
+                "events_allowed": null
+            },
+            "calendar_restricted": false,
+            "parent_child": null
+        }
+    ],
+    "reservations": [
+        {
+            "id": "d0be8141-23ed-4e5d-8fb0-62ed699590b5",
+            "code": "HMJR3D3MHP",
+            "platform": "airbnb",
+            "platform_id": "HMJR3D3MHP",
+            "booking_date": "2024-12-31T15:23:55Z",
+            "arrival_date": "2025-05-04T00:00:00+04:00",
+            "departure_date": "2025-05-31T00:00:00+04:00",
+            "check_in": "2025-05-04T14:00:00+04:00",
+            "check_out": "2025-05-31T12:00:00+04:00",
+            "nights": 27,
+            "reservation_status": {
+                "current": {
+                    "category": "accepted",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2024-12-31T15:24:07+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "7e8763c3-0371-4d9f-a283-d690e6b2f238",
+            "last_message_at": "2024-12-31T15:24:19+00:00",
+            "guests": {
+                "total": 2,
+                "adult_count": 2,
+                "child_count": 0,
+                "infant_count": 0,
+                "pet_count": 0
+            },
+            "status": "accepted",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2024-12-31T15:24:07+00:00"
+                }
+            ]
+        },
+        {
+            "id": "9a9a53fa-b8fc-4b45-ab31-27abd4791f03",
+            "code": "HMWKR2ZKRN",
+            "platform": "airbnb",
+            "platform_id": "HMWKR2ZKRN",
+            "booking_date": "2025-03-05T21:38:10Z",
+            "arrival_date": "2025-04-29T00:00:00+04:00",
+            "departure_date": "2025-05-03T00:00:00+04:00",
+            "check_in": "2025-04-29T14:00:00+04:00",
+            "check_out": "2025-05-03T11:00:00+04:00",
+            "nights": 4,
+            "reservation_status": {
+                "current": {
+                    "category": "accepted",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2025-03-05T21:38:22+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "930f9ae5-6c5f-420b-bd02-1a34fe8292b8",
+            "last_message_at": "2025-03-06T00:25:56+00:00",
+            "guests": {
+                "total": 4,
+                "adult_count": 2,
+                "child_count": 2,
+                "infant_count": 0,
+                "pet_count": 0
+            },
+            "status": "accepted",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2025-03-05T21:38:22+00:00"
+                }
+            ]
+        },
+        {
+            "id": "1e42788f-5269-4f17-8f71-4f315a26963a",
+            "code": "HMCZ9WFJQS",
+            "platform": "airbnb",
+            "platform_id": "HMCZ9WFJQS",
+            "booking_date": "2025-03-16T21:51:09Z",
+            "arrival_date": "2025-04-27T00:00:00+04:00",
+            "departure_date": "2025-04-29T00:00:00+04:00",
+            "check_in": "2025-04-27T14:00:00+04:00",
+            "check_out": "2025-04-29T12:00:00+04:00",
+            "nights": 2,
+            "reservation_status": {
+                "current": {
+                    "category": "accepted",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2025-03-16T21:51:22+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "1cc274aa-1909-4afd-9daa-b0e1c4f19ea1",
+            "last_message_at": "2025-03-16T21:51:26+00:00",
+            "guests": {
+                "total": 2,
+                "adult_count": 2,
+                "child_count": 0,
+                "infant_count": 0,
+                "pet_count": 0
+            },
+            "status": "accepted",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2025-03-16T21:51:22+00:00"
+                }
+            ]
+        },
+        {
+            "id": "6ca0cce5-b1cc-43b3-8aee-42cd49a4658b",
+            "code": "HMQP8YFDDK",
+            "platform": "airbnb",
+            "platform_id": "HMQP8YFDDK",
+            "booking_date": "2025-03-22T10:24:52Z",
+            "arrival_date": "2025-04-27T00:00:00+04:00",
+            "departure_date": "2025-04-29T00:00:00+04:00",
+            "check_in": "2025-04-27T15:00:00+04:00",
+            "check_out": "2025-04-29T12:00:00+04:00",
+            "nights": 2,
+            "reservation_status": {
+                "current": {
+                    "category": "accepted",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2025-03-22T10:25:05+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "8c609e6e-05c8-46ac-9c25-214c48a22fed",
+            "last_message_at": "2025-04-14T21:00:52+00:00",
+            "guests": {
+                "total": 2,
+                "adult_count": 2,
+                "child_count": 0,
+                "infant_count": 0,
+                "pet_count": 0
+            },
+            "status": "accepted",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2025-03-22T10:25:05+00:00"
+                }
+            ]
+        },
+        {
+            "id": "41475739-f1fb-4e76-ac3c-68dfb7b32223",
+            "code": "HMQK9MTT2F",
+            "platform": "airbnb",
+            "platform_id": "HMQK9MTT2F",
+            "booking_date": "2025-04-11T16:45:28Z",
+            "arrival_date": "2025-04-23T00:00:00+04:00",
+            "departure_date": "2025-04-26T00:00:00+04:00",
+            "check_in": "2025-04-23T14:00:00+04:00",
+            "check_out": "2025-04-26T12:00:00+04:00",
+            "nights": 3,
+            "reservation_status": {
+                "current": {
+                    "category": "accepted",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2025-04-11T16:45:40+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "51f8a439-d9a5-4df2-9a04-0800fbeb4695",
+            "last_message_at": "2025-04-23T08:03:06+00:00",
+            "guests": {
+                "total": 3,
+                "adult_count": 1,
+                "child_count": 1,
+                "infant_count": 1,
+                "pet_count": 0
+            },
+            "status": "accepted",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2025-04-11T16:45:40+00:00"
+                }
+            ]
+        },
+        {
+            "id": "a2b81625-2fb1-4fa4-8610-d1a866ed2fa3",
+            "code": "HMMNAE88NE",
+            "platform": "airbnb",
+            "platform_id": "HMMNAE88NE",
+            "booking_date": "2025-04-20T05:01:47Z",
+            "arrival_date": "2025-05-01T00:00:00+04:00",
+            "departure_date": "2025-05-04T00:00:00+04:00",
+            "check_in": "2025-05-01T15:00:00+04:00",
+            "check_out": "2025-05-04T12:00:00+04:00",
+            "nights": 3,
+            "reservation_status": {
+                "current": {
+                    "category": "accepted",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2025-04-20T05:02:00+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "f5c0f4fb-a599-4a32-9ba9-5688ab3c136a",
+            "last_message_at": "2025-04-20T05:07:50+00:00",
+            "guests": {
+                "total": 6,
+                "adult_count": 4,
+                "child_count": 0,
+                "infant_count": 2,
+                "pet_count": 0
+            },
+            "status": "accepted",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2025-04-20T05:02:00+00:00"
+                }
+            ]
+        },
+        {
+            "id": "fa4e201a-0b05-42e1-bc29-c7f31f056e31",
+            "code": "HM9QHFZS8M",
+            "platform": "airbnb",
+            "platform_id": "HM9QHFZS8M",
+            "booking_date": "2025-04-21T08:40:00Z",
+            "arrival_date": "2025-04-24T00:00:00+04:00",
+            "departure_date": "2025-04-26T00:00:00+04:00",
+            "check_in": "2025-04-24T15:00:00+04:00",
+            "check_out": "2025-04-26T12:00:00+04:00",
+            "nights": 2,
+            "reservation_status": {
+                "current": {
+                    "category": "cancelled",
+                    "sub_category": null
+                },
+                "history": [
+                    {
+                        "category": "accepted",
+                        "sub_category": null,
+                        "changed_at": "2025-04-21T08:40:13+00:00"
+                    },
+                    {
+                        "category": "cancelled",
+                        "sub_category": null,
+                        "changed_at": "2025-04-21T09:00:34+00:00"
+                    }
+                ]
+            },
+            "conversation_id": "dca9b559-7199-41d0-82cd-c2f941bdfec4",
+            "last_message_at": "2025-04-21T09:00:37+00:00",
+            "guests": {
+                "total": 3,
+                "adult_count": 3,
+                "child_count": 0,
+                "infant_count": 0,
+                "pet_count": 0
+            },
+            "status": "cancelled",
+            "status_history": [
+                {
+                    "category": "Accepted",
+                    "status": "accepted",
+                    "changed_at": "2025-04-21T08:40:13+00:00"
+                },
+                {
+                    "category": "Cancelled",
+                    "status": "canceled",
+                    "changed_at": "2025-04-21T09:00:34+00:00"
+                }
+            ]
+        }
+    ]
+}
