@@ -1,4 +1,7 @@
-from .client import HospitableClient
+# from .client import HospitableClient
+from client import HospitableClient
+from datetime import datetime
+
 import openai
 from datetime import datetime
 
@@ -33,95 +36,89 @@ def get_property_details(property_id=None) :
         return {"error": f"Failed to fetch property details: {str(e)}"}
 
 
-def check_booking_availability(
-    property_id ,
-    property_name ,
-    city_name,
-    check_in ,
-    check_out 
-):
+
+def check_booking_availability(property_id=None, property_name=None, city_name=None, check_in=None, check_out=None):
     """
-    Check the availability of a property for the specified dates.
+    Check the availability of a property or properties in a city for the specified dates.
 
     Args:
         property_id (str, optional): The ID of the property to check availability for.
         property_name (str, optional): The name of the property (if ID is not provided).
-        check_in  (str, optional): Start date in YYYY-MM-DD format (e.g., '2025-04-22').
-        check_out (str, optional): End date in YYYY-MM-DD format (e.g., '2025-04-25').
+        city_name (str, optional): The city where the property is located.
+        check_in (str, optional): Start date in YYYY-MM-DD format (e.g., '2025-06-10').
+        check_out (str, optional): End date in YYYY-MM-DD format (e.g., '2025-06-15').
 
     Returns:
         dict: A dictionary with 'available' (bool) and 'message' (str) indicating availability.
     """
-    # Ensure at least one identifier is provided
-    # if not property_id and not property_name:
-    #     return {"available": False, "message": " Please provide either a property ID or property name."}
-    property_ids = []
-
     # Ensure dates are provided
-    if not check_in  or not check_out:
-        return {"available": False, "message": " Please provide both check_in  and check_out."}
+    if not check_in or not check_out:
+        return {"available": False, "message": "Please provide both check_in and check_out dates."}
 
-    # Convert date strings to datetime objects
     try:
-        
-        
-        start = datetime.strptime(check_in , "%Y-%m-%d").date()
+        start = datetime.strptime(check_in, "%Y-%m-%d").date()
         end = datetime.strptime(check_out, "%Y-%m-%d").date()
         if start >= end:
-            return {"available": False, "message": "End date must be after start date."}
+            return {"available": False, "message": "Check-out date must be after check-in date."}
     except ValueError:
-        return {"available": False, "message": "Dates must be in YYYY-MM-DD format (e.g., 2025-04-22)."}
+        return {"available": False, "message": "Dates must be in YYYY-MM-DD format (e.g., 2025-06-10)."}
 
-# ekkane hoy toba dubai er property filter kora lagbe get properites by country create kore den
+    # Determine property IDs to check
+    property_ids = []
+    properties_data = []
 
-    try:
-        # Fetch property data based on the provided name, city, or country
-        if property_name and not property_id:
-            # Get property by name
-            property_data = client.get_property_by_name(property_name)
-            print("debuggggggggggggggggggggggggggg",property_data)
-            property_ids = property_data.get("data", [{}])[0].get("id")
-            
-            print("property_id",property_ids)
+    if property_id:
+        property_ids = [property_id,]
+    elif property_name:
+        property_data = client.get_property_by_name(property_name)
+        if not property_data.get("data"):
+            return {"available": False, "message": f"Property '{property_name}' not found."}
+        property_ids = [property_data["data"][0]["id"]]
+    elif city_name:
+        properties_data = client.get_property_by_city(city_name).get("data", [])
+        if not properties_data:
+            return {"available": False, "message": f"No properties found in {city_name}."}
+        property_ids = [prop["id"] for prop in properties_data]
+    else:
+        return {"available": False, "message": "Please provide property_name, or city_name."}
 
-            if not property_ids:
-                return {"available": False, "message": f"Property '{property_name}' not found."}
-
-        elif city_name and not property_id:
-            # Get property by city
-            property_data = client.get_property_by_city(city_name)
-            if len(property_data.get("data", [])) > 0:
-                property_ids = [prop.get("id") for prop in property_data.get("data", [])]
-                # print("Property IDs in city:", property_ids)
-            else:
-                return {"available": False, "message": f"No properties found in {city_name}."}
-
-
-        # Fetch reservations for the properties
-        reservations_data = client.get_reservations_by_properties(property_ids=property_ids).get("data", [])
-        
-        # print("Reservations data:", reservations_data)
-
-        # Date overlap check with existing reservations
-        for booking in reservations_data:
-            # Skip cancelled reservations
+    # Check availability for each property
+    available_properties = []
+    for prop_id in property_ids:
+        reservations = client.get_reservations_by_properties(property_ids=[prop_id]).get("data", [])
+        is_available = True
+        for booking in reservations:
             if booking.get("status") == "cancelled":
                 continue
-
             booked_start = datetime.fromisoformat(booking["arrival_date"].replace("Z", "+00:00")).date()
             booked_end = datetime.fromisoformat(booking["departure_date"].replace("Z", "+00:00")).date()
-
-            # Check for overlap: start < booked_end and end > booked_start
             if start < booked_end and end > booked_start:
-                return {
-                    "available": False,
-                    "message": f"Property is already booked from {booked_start} to {booked_end}."
-                }
+                is_available = False
+                break
+        if is_available:
+            # Get property name for response (if available)
+            prop_name = prop_id
+            if properties_data:
+                prop_name = next((prop["name"] for prop in properties_data if prop["id"] == prop_id), prop_id)
+            available_properties.append(prop_name)
 
-        return {"available": True, "message": "Property is available for these dates."}
-
-    except Exception as e:
-        return {"available": False, "message": f"Failed to check availability: {str(e)}"}
+    # Generate response
+    if available_properties:
+        if len(property_ids) == 1:
+            return {"available": True, "message": "The property is available for these dates."}
+        else:
+            return {
+                "available": True,
+                "message": f"The following properties in {city_name} are available: {', '.join(available_properties)}"
+            }
+    else:
+        if len(property_ids) == 1:
+            return {"available": False, "message": "The property is not available for these dates."}
+        else:
+            return {
+                "available": False,
+                "message": f"No properties in {city_name} are available for these dates."
+            }
 
 
 def preprocessed_property_data(properties_data):

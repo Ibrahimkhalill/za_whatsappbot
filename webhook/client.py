@@ -36,6 +36,9 @@ class HospitableClient:
             params.append(('end_date', check_out))
             
         print("params",params)
+        # ibrahim vai please fix this sometime it not work for some property_id, error: 400 Client Error: Bad Request for url: https://public.api.hospitable.com/v2/reservations",
+        if not params:
+            raise ValueError("At least one property ID must be provided.")
         resp = self.session.get(url, params=params)
         resp.raise_for_status()
         return resp.json()

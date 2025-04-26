@@ -1,0 +1,22 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, I'd like to book your apartment in Dubai from June 10 to June 15 for 2 people. Is it available, and what's the price?",
+    "timestamp": "2025-04-26T16:08:32.507045+00:00"
+  },
+  {
+    "role": "assistant",
+    "content": "Availability check: No properties found in Dubai.",
+    "timestamp": "2025-04-26T16:08:34.505290+00:00"
+  },
+  {
+    "role": "user",
+    "content": "Hello, I'd like to book your apartment in Mascut from June 10 to June 15 for 2 people. Is it available, and what's the price?",
+    "timestamp": "2025-04-26T16:08:58.413990+00:00"
+  },
+  {
+    "role": "assistant",
+    "content": "Availability check: The following properties in Muscat are available: The Walk Flat, The white flat, Cozy Marsa 1 bedroom - 5 min for Airport, White flat 5mins from airport, O2 Apartment, The Gray Cozy Flat, A great apartment near to marina",
+    "timestamp": "2025-04-26T16:09:02.263924+00:00"
+  }
+]
