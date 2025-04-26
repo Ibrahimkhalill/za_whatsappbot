@@ -20,6 +20,7 @@ def airbnb_support_bot(prompt, sender_id):
     
     try:
         # System message designed to handle multilingual inputs and scenario-specific logic
+        # System message designed to handle multilingual inputs and scenario-specific logic
         system_message = {
             "role": "system",
            "content": (
@@ -28,7 +29,10 @@ def airbnb_support_bot(prompt, sender_id):
                 "Assist customers with inquiries about property features, amenities (e.g., Wi-Fi), booking processes, pricing, and check-in/check-out times. "
                 "Key responsibilities: "
                 "- For availability inquiries, call the 'check_booking_availability' tool with property_id (or property_name) and check-in/check-out dates in YYYY-MM-DD format. "
-                "- For property feature or amenity questions (e.g., Wi-Fi, bedrooms), call the 'get_property_details' tool with property_id if provided, or without for all properties. "
+                "- If the user specifies a city (e.g., 'Muscat' or a typo like 'Mascut'), assume it’s a city_name unless a specific property is mentioned, and correct obvious typos (e.g., Mascut → Muscat). "
+                "- If only a city is provided, return availability for all properties in that city. "
+                "- For property feature or amenity questions, call the 'get_property_details' tool. "
+                
                 # "- Provide pricing and negotiate within reasonable limits (e.g., reduce price slightly if requested, like from 65 to 55 OMR). "
                 "- Share property details, such as Wi-Fi passwords (e.g., 12456789), building access codes (e.g., #2024#), or media links (e.g., Instagram: https://www.instagram.com/sialia.chalet). "
                 "- Adjust check-in/check-out times if feasible (e.g., allow 10 AM check-in instead of 1 PM if no conflicting bookings, after checking availability). "
